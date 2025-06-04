@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odliczanie do spełnienia obietnicy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars-bg"></div>
+    <div class="twinkling-bg"></div>
+    <div class="container">
+        <header>
+            <h1 class="glitch" data-text="LICZNIK OBIETNICY">Odliczamy do spełnienia obietnicy wyborczej</h1>
+            <h2 class="neon-text">Nawrockiego</h2>
+        </header>
+
+        <main>
+            <section class="promise-section">
+                <div class="nawrocki-photo">
+                    <img src="nawrocki.png" alt="Zdjęcie Nawrockiego" id="nawrockiImage">
+                </div>
+                <div class="promise-text">
+                    <p>Obietnica:</p>
+                    <p class="quote">"Musimy wrócić do cen energii elektrycznej sprzed czasów pandemii. Gwarantuję, że w ciągu pierwszych 100 dni od objęcia urzędu prezydenta Rzeczypospolitej wprowadzę z pełną determinacją plan "prąd 33 proc."</p>
+                    <p class="deadline-text">Termin realizacji: <strong>14 listopada 2025</strong></p>
+                </div>
+            </section>
+
+            <section class="countdown-section">
+                <h3>DO SPEŁNIENIA OBIETNICY POZOSTAŁO:</h3>
+                <div id="countdown" class="countdown-timer">
+                    <div class="timer-box">
+                        <span id="days" class="value">00</span>
+                        <span class="label">Dni</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="hours" class="value">00</span>
+                        <span class="label">Godzin</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="minutes" class="value">00</span>
+                        <span class="label">Minut</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="seconds" class="value">00</span>
+                        <span class="label">Sekund</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+<footer>
+    <p>&copy; <script>document.write(new Date().getFullYear())</script> - Strona ma charakter wyłącznie informacyjno-satyryczny. | <a href="polityka-prywatnosci.html" style="color: var(--electric-blue);">Polityka Prywatności</a></p>
+    <div class="electric-bar-animation"></div>
+</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
