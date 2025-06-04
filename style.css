@@ -1,11 +1,10 @@
 :root {
     --primary-white: #ffffff;
-    --primary-red: #dc143c; /* Crimson red, a common shade for Polish flag */
+    --primary-red: #dc143c; /* Crimson red */
     --dark-red: #b20000;
-    --light-grey: #f4f4f4;
     --text-color: #333333;
-    --border-color: #e0e0e0;
-    --header-bg: #f8f9fa; /* Slightly off-white for header */
+    --border-color: #e0e0e0; /* Jasnoszary do subtelnych granic */
+    /* Usunięte --light-grey i --header-bg, zastąpione --primary-white */
 }
 
 body {
@@ -25,14 +24,38 @@ body {
 
 /* Header and Navigation */
 .site-header {
-    background-color: var(--header-bg);
+    background-color: var(--primary-white); /* Zmiana z --header-bg */
     padding: 20px 0;
-    border-bottom: 3px solid var(--primary-red);
+    border-bottom: 4px solid var(--primary-red); /* Wyraźniejsza czerwona linia */
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
 }
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.polish-flag-icon {
+    width: 30px;
+    height: 20px;
+    margin-right: 15px;
+    border: 1px solid var(--border-color);
+}
+
+.polish-flag-icon .flag-white {
+    height: 50%;
+    background-color: var(--primary-white); /* Już jest białe tło, ale dla pewności */
+}
+
+.polish-flag-icon .flag-red {
+    height: 50%;
+    background-color: var(--primary-red);
+}
+
 
 .logo h1 {
     font-size: 1.8em;
@@ -46,6 +69,10 @@ body {
     margin: 0;
     color: var(--text-color);
     font-weight: 400;
+}
+
+.main-nav {
+    margin-left: auto; /* Pushes nav to the right if space allows */
 }
 
 .main-nav ul {
@@ -77,7 +104,7 @@ body {
 /* Promise Section */
 .promise-section {
     padding: 40px 0;
-    background-color: var(--light-grey);
+    background-color: var(--primary-white); /* Zmiana z --light-grey */
     text-align: center;
     border-bottom: 1px solid var(--border-color);
 }
@@ -165,16 +192,16 @@ body {
 }
 
 .timer-box {
-    background-color: var(--light-grey);
+    background-color: var(--primary-white); /* Zmiana z --light-grey */
     padding: 20px;
     border-radius: 8px;
     min-width: 100px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Lżejszy cień */
 }
 
 .timer-box .value {
-    font-family: 'Roboto', sans-serif; /* Standard font for numbers */
+    font-family: 'Roboto', sans-serif;
     font-size: 2.8em;
     color: var(--primary-red);
     display: block;
@@ -194,7 +221,7 @@ body {
 .news-section {
     padding: 40px 0;
     text-align: center;
-    background-color: var(--light-grey);
+    background-color: var(--primary-white); /* Zmiana z --light-grey */
     border-top: 1px solid var(--border-color);
 }
 
@@ -216,8 +243,8 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 20px;
-    width: calc(33.333% - 40px); /* Adjust for gap */
-    min-width: 280px; /* Minimum width for smaller screens / wrapping */
+    width: calc(33.333% - 40px);
+    min-width: 280px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     text-align: left;
     transition: box-shadow 0.3s ease;
@@ -233,7 +260,7 @@ body {
     object-fit: cover;
     border-radius: 6px;
     margin-bottom: 15px;
-    background-color: #e0e0e0; /* Placeholder color */
+    background-color: #e0e0e0;
 }
 
 .news-tile h3 {
@@ -269,8 +296,8 @@ body {
     text-align: center;
     padding: 25px 0;
     margin-top: 30px;
-    border-top: 3px solid var(--primary-red);
-    background-color: var(--header-bg);
+    border-top: 4px solid var(--primary-red); /* Wyraźniejsza czerwona linia */
+    background-color: var(--primary-white); /* Zmiana z --header-bg */
     font-size: 0.9em;
 }
 
@@ -287,10 +314,83 @@ body {
     text-decoration: underline;
 }
 
+/* Privacy Policy Page Specific Styles */
+.privacy-content-page {
+    padding: 30px; /* Zwiększony padding dla lepszych marginesów wewnętrznych */
+    background-color: var(--primary-white); /* Upewnienie się, że tło jest białe */
+}
+
+.privacy-content-page h1, 
+.privacy-content-page h2,
+.privacy-content-page h3 { /* Dodane h3 dla spójności */
+    color: var(--primary-red);
+    font-family: 'Roboto', sans-serif; /* Jawne ustawienie Roboto */
+}
+.privacy-content-page h1 {
+    font-size: 2em; /* Dopasowanie wielkości do reszty strony */
+    margin-bottom: 20px;
+}
+.privacy-content-page h2 {
+    font-size: 1.6em; /* Dopasowanie wielkości */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.privacy-content-page h3 {
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.privacy-content-page p,
+.privacy-content-page li {
+    font-family: 'Roboto', sans-serif; /* Jawne ustawienie Roboto */
+    color: var(--text-color); /* Standardowy kolor tekstu */
+    line-height: 1.7; /* Poprawa czytelności */
+    text-align: left; /* Domyślne, ale dla pewności */
+}
+.privacy-content-page ul {
+    padding-left: 20px; /* Standardowy wcięcie listy */
+    list-style-type: square; /* Zgodnie z oryginalnym stylem */
+}
+.privacy-content-page strong {
+    font-weight: 700; /* Standardowe pogrubienie */
+    color: var(--text-color); /* Można zmienić na var(--primary-red) jeśli preferowane */
+}
+
+.privacy-content-page hr {
+    border: none;
+    border-top: 1px solid var(--border-color); /* Zmiana na jaśniejszy border */
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%; /* Upewnienie się, że jest na całą szerokość kontenera paddingu */
+}
+
+.privacy-content-page .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: var(--primary-red);
+    color: var(--primary-white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.privacy-content-page .back-link:hover {
+    background-color: var(--dark-red);
+}
+
 /* Responsive Adjustments */
 @media (max-width: 992px) {
     .news-tile {
-        width: calc(50% - 30px); /* Adjust for gap */
+        width: calc(50% - 30px);
+    }
+    .main-nav {
+        margin-left: 0; /* Reset margin for stacked layout */
+        width: 100%; /* Nav takes full width */
+        margin-top: 15px; /* Space between logo and nav */
+    }
+    .main-nav ul {
+        justify-content: center; /* Center nav items */
     }
 }
 
@@ -299,9 +399,18 @@ body {
         flex-direction: column;
         align-items: center;
     }
+    .header-content { /* Allow flag and logo to stack if needed or stay row */
+        flex-direction: column; /* Stack flag and logo on smaller screens */
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .polish-flag-icon {
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between flag and logo text */
+    }
     .logo {
         text-align: center;
-        margin-bottom: 15px;
+        /* margin-bottom: 15px; - usunięte, bo header-content ma mb */
     }
     .main-nav ul {
         flex-direction: column;
@@ -330,7 +439,10 @@ body {
         font-size: 2.2em;
     }
     .news-tile {
-        width: calc(100% - 40px); /* Full width on small screens */
+        width: calc(100% - 40px);
+    }
+    .privacy-content-page {
+        padding: 20px; /* Mniejszy padding na bardzo małych ekranach */
     }
 }
 
@@ -351,25 +463,15 @@ body {
     .timer-box .label {
         font-size: 0.7em;
     }
-}
-
-/* Privacy Policy Page Specific Minimal Styles (can be expanded) */
-.privacy-content-page {
-    padding: 20px;
-}
-.privacy-content-page h1, .privacy-content-page h2 {
-    color: var(--primary-red);
-}
-.privacy-content-page .back-link {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 15px;
-    background-color: var(--primary-red);
-    color: var(--primary-white);
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-}
-.privacy-content-page .back-link:hover {
-    background-color: var(--dark-red);
+    .main-nav ul {
+        width: 100%; /* Ensure full width for centering column items */
+    }
+    .main-nav li {
+        width: 80%; /* Make nav links wider for easier tapping */
+        text-align: center;
+    }
+    .main-nav a {
+        display: block; /* Make the whole area clickable */
+        padding: 10px;
+    }
 }

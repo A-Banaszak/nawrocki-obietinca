@@ -3,91 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polityka Prywatności - Licznik Obietnicy Nawrockiego</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-      
-        .privacy-content h2 {
-            color: var(--electric-blue);
-            margin-top: 2em;
-            margin-bottom: 1em;
-            font-family: 'Orbitron', sans-serif;
-            text-shadow: 0 0 5px var(--electric-blue);
-        }
-        .privacy-content h3 {
-            color: var(--neon-green);
-            margin-top: 1.5em;
-            margin-bottom: 0.8em;
-        }
-        .privacy-content p, .privacy-content li {
-            text-align: left;
-            line-height: 1.7;
-            margin-bottom: 0.8em;
-        }
-        .privacy-content ul {
-            padding-left: 20px;
-            list-style-type: square;
-        }
-        .privacy-content strong {
-            color: var(--bright-white);
-        }
-        .privacy-content a {
-            color: var(--electric-blue);
-            text-decoration: none;
-        }
-        .privacy-content a:hover {
-            text-decoration: underline;
-            color: var(--neon-green);
-        }
-        .back-link {
-            display: block;
-            margin: 20px auto 0;
-            padding: 10px 20px;
-            background-color: var(--electric-blue);
-            color: var(--primary-black);
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            max-width: 200px;
-            font-family: 'Orbitron', sans-serif;
-        }
-        .back-link:hover {
-            background-color: var(--neon-green);
-            color: var(--primary-black);
-        }
-
-        a.back-link {
-            color: var(--primary-black);
-        }
-        a.back-link:hover {
-            color: var(--primary-black);
-        }
-       
-        header h1.static-title {
-            animation: none; 
-            color: var(--electric-blue); 
-            text-shadow: 0 0 5px var(--electric-blue),
-                         0 0 10px var(--electric-blue),
-                         0 0 15px var(--electric-blue);
-        }
-         header h1.static-title::before,
-         header h1.static-title::after {
-            display: none; 
-        }
-    </style>
+    <title>Polityka Prywatności - Obietnica Nawrockiego</title>
+    <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="stars-bg"></div>
-    <div class="twinkling-bg"></div>
-    <div class="container">
-        <header>
-            <h1 class="static-title">POLITYKA PRYWATNOŚCI</h1>
+    <div class="site-container">
+        <header class="site-header">
+            <div class="logo">
+                <h1>OBEJRZYJMY OBIETNICĘ</h1>
+                <h2>Oficjalny licznik dla Piotra Nawrockiego</h2>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Strona Główna</a></li>
+                    <li><a href="index.html#news">Aktualności</a></li>
+                    <li><a href="polityka-prywatnosci.html" class="active">Polityka Prywatności</a></li>
+                </ul>
+            </nav>
         </header>
 
-        <main class="privacy-content">
-            <p>Data ostatniej aktualizacji: <strong>4 czerwca 2025</strong></p>
+        <main class="privacy-content-page"> <h1>POLITYKA PRYWATNOŚCI</h1> <p>Data ostatniej aktualizacji: <strong>4 czerwca 2025</strong></p>
 
             <h2>1. Wprowadzenie</h2>
             <p>Niniejsza Polityka Prywatności określa zasady przetwarzania i ochrony danych osobowych użytkowników strony internetowej <strong>obietnica-nawrockiego.pl</strong> (dalej jako "Serwis"), której administratorem jest <strong>zatroskany wyborca</strong>, adres e-mail: <strong>kontakt@obietnica-nawrockiego.pl</strong>.</p>
@@ -153,16 +88,16 @@
             <h2>9. Kontakt</h2>
             <p>W przypadku pytań dotyczących niniejszej Polityki Prywatności lub przetwarzania Twoich danych, prosimy o kontakt pod adresem e-mail: <strong>[Twój adres e-mail do kontaktu]</strong>.</p>
 
-            <hr style="border-color: var(--dark-grey); margin-top: 30px; margin-bottom: 20px;">
+            <hr style="border-top: 1px solid var(--border-color); margin-top: 30px; margin-bottom: 20px;">
 
             <p style="text-align:center;">
                 <a href="index.html" class="back-link">Powrót do strony głównej</a>
             </p>
         </main>
 
-        <footer>
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> - Strona ma charakter wyłącznie informacyjny.</p>
-            <div class="electric-bar-animation"></div>
+        <footer class="site-footer">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> - Oficjalny Serwis Informacyjny "Obietnica Nawrockiego".</p>
+            <p>Strona ma charakter wyłącznie informacyjny. | <a href="polityka-prywatnosci.html">Polityka Prywatności</a></p>
         </footer>
     </div>
     </body>

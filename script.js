@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const hoursEl = document.getElementById("hours");
   const minutesEl = document.getElementById("minutes");
   const secondsEl = document.getElementById("seconds");
-  // const nawrockiImage = document.getElementById("nawrockiImage"); // Image animation removed
 
   const targetDate = new Date("2025-11-14T00:00:00").getTime();
+
+  
 
   if (isNaN(targetDate)) {
     console.error("Nieprawidłowa data docelowa!");
@@ -56,4 +57,38 @@ document.addEventListener("DOMContentLoaded", () => {
   // Typewriter effect removed for a more static/professional presentation
   // Image pulse animation removed
   // Container glow animation removed
+ function setActiveNavLink() {
+    const navLinks = document.querySelectorAll(".main-nav a");
+    const currentPage = window.location.pathname.split("/").pop(); // Pobiera nazwę pliku np. "index.html"
+
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute("href").split("/").pop();
+      // Usuń klasę active ze wszystkich linków najpierw
+      link.classList.remove("active");
+
+      if (currentPage === "" && linkPage === "index.html") { // Dla strony głównej bez nazwy pliku w URL
+        link.classList.add("active");
+      } else if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+      
+      // Specjalna obsługa dla linku #news, jeśli jest na stronie głównej
+      if (currentPage === "index.html" && window.location.hash === "#news" && link.getAttribute("href") === "index.html#news") {
+        // Najpierw usuń active z linku do samej strony głównej, jeśli jest
+        document.querySelector('.main-nav a[href="index.html"]').classList.remove('active');
+        link.classList.add("active");
+      } else if (currentPage === "" && window.location.hash === "#news" && link.getAttribute("href") === "index.html#news") {
+        // Najpierw usuń active z linku do samej strony głównej, jeśli jest
+        document.querySelector('.main-nav a[href="index.html"]').classList.remove('active');
+        link.classList.add("active");
+      }
+    });
+  }
+
+  setActiveNavLink(); // Wywołaj funkcję po załadowaniu DOM
+  
+  // Jeśli masz nawigację, która zmienia hash (np. link do sekcji #news),
+  // możesz chcieć odświeżyć aktywny link po zmianie hasha
+  window.addEventListener('hashchange', setActiveNavLink);
+
 });
