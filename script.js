@@ -4,15 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const hoursEl = document.getElementById("hours");
   const minutesEl = document.getElementById("minutes");
   const secondsEl = document.getElementById("seconds");
-  const nawrockiImage = document.getElementById("nawrockiImage");
-
+  // const nawrockiImage = document.getElementById("nawrockiImage"); // Image animation removed
 
   const targetDate = new Date("2025-11-14T00:00:00").getTime();
+
   if (isNaN(targetDate)) {
     console.error("Nieprawidłowa data docelowa!");
-    if (countdownElement)
+    if (countdownElement) {
       countdownElement.innerHTML =
         "<p style='color:red;'>Błąd: Nieprawidłowa data docelowa!</p>";
+    }
     return;
   }
 
@@ -23,10 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (timeLeft < 0) {
       if (countdownElement) {
         countdownElement.innerHTML =
-          "<p class='neon-text' style='font-size: 1.5em;'>CZAS MINĄŁ!</p>";
-
-        document.querySelector(".countdown-section h3").textContent =
-          "TERMIN SPEŁNIENIA OBIETNICY UPŁYNĄŁ:";
+          "<p style='font-size: 1.5em; color: var(--primary-red); font-weight: bold;'>CZAS MINĄŁ!</p>";
+        // Adjust heading for countdown section
+        const countdownHeading = document.querySelector(".countdown-section h3");
+        if (countdownHeading) {
+            countdownHeading.textContent = "TERMIN SPEŁNIENIA OBIETNICY UPŁYNĄŁ:";
+        }
       }
       clearInterval(timerInterval);
       return;
@@ -44,41 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, "0");
     if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, "0");
 
-
-    if (secondsEl) {
-      secondsEl.style.transform = "scale(1.1)";
-      secondsEl.style.color = "var(--electric-blue)";
-      setTimeout(() => {
-        secondsEl.style.transform = "scale(1)";
-        secondsEl.style.color = "var(--neon-green)";
-      }, 150);
-    }
+    // Removed per-second animation for a cleaner look
   }
 
   const timerInterval = setInterval(updateCountdown, 1000);
-  updateCountdown();
-  const quoteElement = document.querySelector(".promise-text .quote");
-  if (quoteElement) {
-    const originalText = quoteElement.textContent;
-    quoteElement.textContent = "";
-    let i = 0;
-    function typeWriter() {
-      if (i < originalText.length) {
-        quoteElement.textContent += originalText.charAt(i);
-        i++;
-        setTimeout(typeWriter, 50);
-      }
-    }
+  updateCountdown(); // Initial call to display countdown immediately
 
-    setTimeout(typeWriter, 1000);
-  }
-
-  if (nawrockiImage) {
-    nawrockiImage.style.animation = "imagePulse 5s infinite alternate";
-  }
-
-  const container = document.querySelector(".container");
-  if (container) {
-    container.style.animation = "containerGlowIn 1.5s ease-out";
-  }
+  // Typewriter effect removed for a more static/professional presentation
+  // Image pulse animation removed
+  // Container glow animation removed
 });

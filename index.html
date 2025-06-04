@@ -3,28 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odliczanie do spełnienia obietnicy</title>
+    <title>Obietnica Nawrockiego - Oficjalny Serwis Informacyjny</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="stars-bg"></div>
-    <div class="twinkling-bg"></div>
-    <div class="container">
-        <header>
-            <h1 class="glitch" data-text="LICZNIK OBIETNICY">Odliczamy do spełnienia obietnicy wyborczej</h1>
-            <h2 class="neon-text">Nawrockiego</h2>
+    <div class="site-container">
+        <header class="site-header">
+            <div class="logo">
+                <h1>OBEJRZYJMY OBIETNICĘ</h1>
+                <h2>Oficjalny licznik dla Piotra Nawrockiego</h2>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Strona Główna</a></li>
+                    <li><a href="#news">Aktualności</a></li>
+                    <li><a href="polityka-prywatnosci.html">Polityka Prywatności</a></li>
+                </ul>
+            </nav>
         </header>
 
         <main>
             <section class="promise-section">
-                <div class="nawrocki-photo">
-                    <img src="nawrocki.png" alt="Zdjęcie Nawrockiego" id="nawrockiImage">
-                </div>
-                <div class="promise-text">
-                    <p>Obietnica:</p>
-                    <p class="quote">"Musimy wrócić do cen energii elektrycznej sprzed czasów pandemii. Gwarantuję, że w ciągu pierwszych 100 dni od objęcia urzędu prezydenta Rzeczypospolitej wprowadzę z pełną determinacją plan "prąd 33 proc."</p>
-                    <p class="deadline-text">Termin realizacji: <strong>14 listopada 2025</strong></p>
+                <div class="promise-content">
+                    <div class="nawrocki-photo">
+                        <img src="nawrocki.png" alt="Zdjęcie Piotra Nawrockiego" id="nawrockiImage">
+                    </div>
+                    <div class="promise-text">
+                        <h2>Obietnica Wyborcza Piotra Nawrockiego</h2>
+                        <p class="quote">"Musimy wrócić do cen energii elektrycznej sprzed czasów pandemii. Gwarantuję, że w ciągu pierwszych 100 dni od objęcia urzędu prezydenta Rzeczypospolitej wprowadzę z pełną determinacją plan "prąd 33 proc."</p>
+                        <p class="deadline-text">Termin realizacji tej obietnicy: <strong>14 listopada 2025</strong></p>
+                    </div>
                 </div>
             </section>
 
@@ -49,12 +58,36 @@
                     </div>
                 </div>
             </section>
+
+            <section id="news" class="news-section">
+                <h2>Aktualności dotyczące Piotra Nawrockiego i obietnicy</h2>
+                <div class="news-tiles">
+                    <article class="news-tile">
+                        <img src="placeholder-news1.jpg" alt="Placeholder news image 1">
+                        <h3>Nawrocki o Planach Energetycznych</h3>
+                        <p>W ostatnim wywiadzie Piotr Nawrocki ponownie podkreślił swoje zaangażowanie w reformę sektora energetycznego...</p>
+                        <a href="#" class="read-more">Czytaj więcej</a>
+                    </article>
+                    <article class="news-tile">
+                        <img src="placeholder-news2.jpg" alt="Placeholder news image 2">
+                        <h3>Analiza Obietnicy "Prąd 33%"</h3>
+                        <p>Eksperci analizują wykonalność i potencjalne skutki realizacji planu "prąd 33 proc." obiecanego przez Nawrockiego...</p>
+                        <a href="#" class="read-more">Czytaj więcej</a>
+                    </article>
+                    <article class="news-tile">
+                        <img src="placeholder-news3.jpg" alt="Placeholder news image 3">
+                        <h3>Spotkanie z Wyborcami</h3>
+                        <p>Piotr Nawrocki spotkał się z wyborcami, aby omówić kluczowe punkty swojego programu, w tym kwestie cen energii...</p>
+                        <a href="#" class="read-more">Czytaj więcej</a>
+                    </article>
+                </div>
+            </section>
         </main>
 
-<footer>
-    <p>&copy; <script>document.write(new Date().getFullYear())</script> - Strona ma charakter wyłącznie informacyjno-satyryczny. | <a href="polityka-prywatnosci.html" style="color: var(--electric-blue);">Polityka Prywatności</a></p>
-    <div class="electric-bar-animation"></div>
-</footer>
+        <footer class="site-footer">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> - Oficjalny Serwis Informacyjny "Obietnica Nawrockiego".</p>
+            <p>Strona ma charakter wyłącznie informacyjny. | <a href="polityka-prywatnosci.html">Polityka Prywatności</a></p>
+        </footer>
     </div>
 
     <script src="script.js"></script>
